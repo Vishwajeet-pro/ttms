@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    height: 100vh;
+    width: 100vw;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.main .card{
+    height: 90vh;
+    width: 90vw;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.card .cardtop{
+    /* background-color: rebeccapurple; */
+    height: 10vh;
+    font-size: 4vh;
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+
+ /* top khatam mid chalu------------------------------------------------------------------------------------------------------- */
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ .card .cardmid{
+  /* background-color: aqua; */
+  margin: 5vh 0;
+  width: 90%;
+ height: calc(100%-20vh);
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(5,1fr);
+  gap: 3vh;
+ 
+}
+
+form input {
+    height: 5vh;
+    width: 20vh;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 2px solid blue;
+}
+
+label{
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px;
+
+}
+
+input#datetime{
+    height: 5vh;
+    width: 20vh;
+    margin: 12px;
+    border-radius: 5px;
+    border: 2px solid blue;
+
+}
+
+/* right ka kaam khatam----------------------------------------------------------------------------------------------------  */
+ 
+
+.card .cardbottom{
+    /* background-color: brown; */
+    border-top: 2px solid blue;
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cardbottom button{
+    border: none;
+    padding: 10px  40px;
+    border-radius: 4px;
+    background-color: blue;
+    color: white;
+}
+button:hover{
+    background-color: lightblue;
+    color: black;
+}

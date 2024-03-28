@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/stylesheets/login.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="maincard">
+          <div class="form">
+            <h1>GATE LOGIN</h1>
+            <div class="line"></div>
+              <% if(error.length>0){ %>
+                <p class="error"><%= error%></p>
+              <%}%>
+            <form action="/login" method="post">
+
+              <input type="text" name="username" id="" placeholder="Enter the Email">
+              <input type="password" name="password" placeholder="Enter the Password">
+              <button class="loginbtn" type="submit">Login</button>
+              
+            </form>
+            <form action="/register" method="get">
+
+              <button class="registerbtn" type="submit">Sign Up</button>
+            </form>
+            </div>
+        </div>
+    </div>
+
+    <script >
+      
+    </script>
+</body>
+</html>

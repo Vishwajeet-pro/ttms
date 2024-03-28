@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: lightblue; */
+    background: linear-gradient(135deg,lightblue,rgb(36, 36, 37));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .maincard{
+    width: 30vw;
+    height: 80vh;
+    background-color: white;
+    border-radius: 13px;
+    
+}
+.maincard .form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form h1{
+    margin:  20px;
+    padding: 10px;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.form .line{
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    margin: 10px 0px;
+}
+
+.form form{
+    height: min-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input{
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+    border: 2px black solid;
+}
+
+.form .loginbtn{
+    background-color: blue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px;
+    padding: 10px;
+    width: 70%;
+    text-align: center;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1px;
+    border-radius: 6px;
+}
+
+form .registerbtn{
+    background-color: blue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px;
+    padding: 10px;
+    width: 70%;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    
+    border-radius: 6px;
+}
+
+.loginbtn:hover{
+     cursor: pointer;
+     background-color: lightblue;
+     color:black;
+}
+
+.registerbtn:hover{
+     cursor: pointer;
+     background-color: lightblue;
+     color:black;
+     
+}
+
+
+
+
