@@ -5,6 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
 var flash = require("connect-flash")
+const bodyParser = require('body-parser');
+
 
 var indexRouter = require('./routes/index');
 var userRouter=  require('./routes/user');
@@ -23,7 +25,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 passport.serializeUser(userRouter.serializeUser());
 passport.deserializeUser(userRouter.deserializeUser());
-
+app.use(bodyParser.json());
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -35,6 +37,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/user',userRouter)
+
+
+
+
+
+
+
+
+
+
 
 
 // catch 404 and forward to error handler

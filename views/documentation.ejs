@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentatin</title>
+    <link rel="stylesheet" href="/stylesheets/documentation.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="card">
+            <div class="cardtop">
+                FILL ALL THE DETAILS BELOW ( DOCUMENTATION )
+            </div>
+            <form action="/documentation" method="post">
+                <div class="cardmid">
+
+                    
+                    <label>Vehicle Number</label>
+                    <input type="text" name="vehicleNumber" id="" class="left1" required>
+                    
+                    <label>Transporter</label>
+                    <input type="text" name="transporter" id="" class="left5" required>
+
+                    <label>Location</label>
+                    <input type="text" name="location" id="" class="left2" required>
+
+
+                    <label>Do Recieved Date and Time</label>
+                    <input type="datetime-local" name="recieveDNT" id="datetime" class="left3" required>
+ 
+
+                    <label>Invoice Start date and time</label>
+                    <input type="datetime-local" name="invoiceStartDNT" id="datetime" class="left6" required>
+
+
+                    <label>Invoice End date and time</label>
+                    <input type="datetime-local" name="invoiceEndDNT" id="datetime" class="right1" required>
+
+
+                    <label>Shift Incharge</label>
+                    <input type="text" name="shiftIncharge" id="" class="right2" required>
+
+
+                    <label>Shift</label>
+                    <input type="text" id="" name="shift" required>
+
+                    
+
+
+                    <label>Driver's Mobile Number</label>
+                    <input type="number" name="driverMob" id="" class="right4" required>
+
+                    <label>Invoice Number</label>
+                    <input type="number" name="invoiceNumber" id="" class="right5" required>
+
+                    <label>Remark</label>
+                    <input type="text" id="" name="remark" >
+
+
+                </div>
+
+                <div class="cardbottom">
+                    <button type="reset" value="reset">Reset</button>
+                    <button type="submit" id="submitA">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Get current date and time in the format expected by input type datetime-local
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, '0'); // January is 0, so we add 1
+        const day = String(now.getDate()).padStart(2, '0');
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const datetime = `${year}-${month}-${day}T${hours}:${minutes}`;
+        
+        // Set the value of the datetime input to the current date and time
+        document.getElementById('datetime').value = datetime;
+        
+    </script>
+</body>
+
+</html>

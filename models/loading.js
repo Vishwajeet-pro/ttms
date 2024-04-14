@@ -46,7 +46,12 @@ const loadingSchema = new mongoose.Schema({
     useSheet: {
         type: String,
         required: true
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
     }
+
 });
 
 // Create a model

@@ -36,7 +36,12 @@ const gateASchema = new mongoose.Schema({
     tareWeight: {
         type: Number,
         required: true
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
     }
+
 });
 
 const gateAModel = mongoose.model('gateA', gateASchema);

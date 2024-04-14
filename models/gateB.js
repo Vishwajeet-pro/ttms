@@ -24,7 +24,12 @@ const gateBSchema = new mongoose.Schema({
     remark: {
         type: String,
         required: false
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
     }
+
 });
 
 const gateBModel = mongoose.model('gateB', gateBSchema);
