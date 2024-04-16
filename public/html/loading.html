@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading & Unloading</title>
+    <link rel="stylesheet" href="/stylesheets/loading.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="card">
+            <div class="cardtop">
+                FILL ALL THE DETAILS BELOW ( LOADING AND UNLOADING )
+            </div>
+            <form action="/loading" method="post">
+                <div class="cardmid">
+
+
+
+
+
+                    <label>Vehicle Number</label>
+                    <input type="text" name="vehicleNumber" id="" class="left1">
+
+
+                    <label>Location</label>
+                    <input type="text" name="location" id="" class="left2">
+
+
+                    <label>Qty(in pack)</label>
+                    <input type="text" name="quantityPack" id="" class="left3">
+
+
+                    <label>Lashing</label>
+                    <div>
+                        <label for="">Yes</label>
+                        <input type="radio" name="lashing" value="Yes" id="">
+                        <label for="">No</label>
+                        <input type="radio" name="lashing" value="No" id="">
+                    </div>
+
+
+
+                    <label>Transporter</label>
+                    <input type="text" name="transporter" id="" class="left5">
+
+
+                    <label>Capacity(in tons)</label>
+                    <input type="text" name="capacity" id="" class="left6">
+
+
+                    <label>Qty (in ltr)</label>
+                    <input type="text" name="quantityLTR" id="" class="right1">
+
+
+                    <label>Use Of Ply</label>
+                    <input type="text" name="usePly" id="" class="right2">
+
+
+                    <label>Date & Time</label>
+                    <input type="datetime-local" id="datetime" name="datetime" required>
+
+
+
+                    <label>No. Of Barrels</label>
+                    <input type="text" name="numberBarrels" id="" class="right4">
+
+                    <label>Use Of Sheet</label>
+                    <input type="text" name="useSheet" id="" class="right5">
+
+
+                </div>
+
+                <div class="cardbottom">
+                    <button type="reset" value="reset">Reset</button>
+                    <button type="submit" id="submitA">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Get current date and time in the format expected by input type datetime-local
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, '0'); // January is 0, so we add 1
+        const day = String(now.getDate()).padStart(2, '0');
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const datetime = `${year}-${month}-${day}T${hours}:${minutes}`;
+        
+        // Set the value of the datetime input to the current date and time
+        document.getElementById('datetime').value = datetime;
+        
+    </script>
+</body>
+
+</html>

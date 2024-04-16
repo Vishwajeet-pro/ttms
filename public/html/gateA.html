@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GateARegister</title>
+    <link rel="stylesheet" href="/stylesheets/gateA.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="card">
+            <div class="cardtop">
+                ENTER ALL THE DETAILS TO PROCEED (GATE A)
+            </div>
+            <form action="/gateA" method="post">
+                <div class="cardmid">
+
+
+
+
+                    <label>Gate Entry No.</label>
+                    <input type="text" name="gateEntryNo" id="">
+
+
+
+                    <label>Inward Type</label>
+                    <input type="text" name="inwardType" id="">
+
+
+                    <label>Vehicle Type</label>
+                    <input type="text" name="vehicleType" id="">
+
+
+                    <label>Reporting Time & Date</label>
+                    <input type="datetime-local" name="reportingDNT" id="datetime">
+
+
+                    <label>Transporter</label>
+                    <input type="text" name="transporter" id="">
+
+
+                    <label>Location</label>
+                    <input type="text" name="location" id="">
+
+
+
+                    <label>In Date & Time</label>
+                    <input type="datetime-local" name="inDNT" id="datetime">
+
+
+                    <label>Vehicle Number</label>
+                    <input type="text" name="vehicleNumber" id="">
+
+
+
+                    <label>Tare Weight</label>
+                    <input type="text" name="tareWeight" id="">
+
+                   
+
+                </div>
+                <div class="cardbottom">
+                    <button type="reset">Reset</button>
+
+                    <button type="submit" id="SubmitB">Submit</button>
+                </div>
+            </form>
+
+
+
+        </div>
+    </div>
+
+    <script>
+        // Get current date and time in the format expected by input type datetime-local
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, '0'); // January is 0, so we add 1
+        const day = String(now.getDate()).padStart(2, '0');
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const datetime = `${year}-${month}-${day}T${hours}:${minutes}`;
+        
+        // Set the value of the datetime input to the current date and time
+        document.getElementById('datetime').value = datetime;
+    </script>
+</body>
+
+</html>
